@@ -1,4 +1,4 @@
-package com.example.dontstarvetogetherapi;
+package com.example.dontstarvetogetherapi.app;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
