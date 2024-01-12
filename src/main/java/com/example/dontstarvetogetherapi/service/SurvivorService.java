@@ -1,7 +1,7 @@
 package com.example.dontstarvetogetherapi.service;
 
 import com.example.dontstarvetogetherapi.domain.Survivor;
-import com.example.dontstarvetogetherapi.exception.InvalidNameException;
+import com.example.dontstarvetogetherapi.exception.NotFoundException;
 import com.example.dontstarvetogetherapi.repository.SurvivorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -29,7 +29,7 @@ public class SurvivorService {
         log.info("Getting survivor by name: " + name);
 
         Survivor survivor = repository.findByName(name);
-        if (survivor == null) throw new InvalidNameException("No records found for this id.");
+        if (survivor == null) throw new NotFoundException("No results found for " + name);
 
         return survivor;
     }

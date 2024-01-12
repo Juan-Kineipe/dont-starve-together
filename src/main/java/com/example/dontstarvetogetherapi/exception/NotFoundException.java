@@ -4,11 +4,11 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 @ResponseStatus(HttpStatus.NOT_FOUND)
-public class InvalidNameException extends RuntimeException {
+public class NotFoundException extends RuntimeException {
 
     private static final long serialVersionUID = 1L;
 
-    public InvalidNameException(String e) {
+    public NotFoundException(String e) {
         super(e);
     }
 }
