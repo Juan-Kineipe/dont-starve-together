@@ -25,6 +25,10 @@ public class Survivor {
      private String description;
      @Column
      private String motto;
+     @Column
+     private String icon;
+     @Column
+     private String portrait;
      @Column(name = "favorite_food")
      private String favoriteFood;
      @Column
@@ -98,6 +102,22 @@ public class Survivor {
 
      public void setMotto(String motto) {
           this.motto = motto;
+     }
+
+     public String getIcon() {
+          return icon;
+     }
+
+     public void setIcon(String icon) {
+          this.icon = icon;
+     }
+
+     public String getPortrait() {
+          return portrait;
+     }
+
+     public void setPortrait(String portrait) {
+          this.portrait = portrait;
      }
 
      public String getFavoriteFood() {
