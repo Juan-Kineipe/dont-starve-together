@@ -3,10 +3,16 @@ package com.example.dontstarvetogetherapi.domain;
 import com.example.dontstarvetogetherapi.domain.enums.OddsOfSurvivalEnum;
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "survivor")
+@SecondaryTables({
+        @SecondaryTable(name="survivor_perks", pkJoinColumns = @PrimaryKeyJoinColumn(name="survivor_id")),
+        @SecondaryTable(name="survivor_skins", pkJoinColumns = @PrimaryKeyJoinColumn(name="survivor_id"))
+})
 public class Survivor {
      @Id
      @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -31,6 +37,9 @@ public class Survivor {
      private int hunger;
      @Column
      private int sanity;
+     @ElementCollection
+     @Column(name = "description", table = "survivor_perks")
+     private List<String> perks = new ArrayList<>();
 
      public Survivor(long id, String name, String title, String description, String motto, String favoriteFood, Date birthday, OddsOfSurvivalEnum oddsOfSurvival, int health, int hunger, int sanity) {
           this.id = id;
@@ -134,5 +143,13 @@ public class Survivor {
 
      public void setSanity(int sanity) {
           this.sanity = sanity;
+     }
+
+     public List<String> getPerks() {
+          return perks;
+     }
+
+     public void setPerks(List<String> perks) {
+          this.perks = perks;
      }
 }
