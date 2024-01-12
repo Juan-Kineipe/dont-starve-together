@@ -40,6 +40,9 @@ public class Survivor {
      @ElementCollection
      @Column(name = "description", table = "survivor_perks")
      private List<String> perks = new ArrayList<>();
+     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+     @JoinColumn(name = "survivor_id")
+     private List<SurvivorSkin> skins = new ArrayList<>();
 
      public Survivor(long id, String name, String title, String description, String motto, String favoriteFood, Date birthday, OddsOfSurvivalEnum oddsOfSurvival, int health, int hunger, int sanity) {
           this.id = id;
@@ -151,5 +154,13 @@ public class Survivor {
 
      public void setPerks(List<String> perks) {
           this.perks = perks;
+     }
+
+     public List<SurvivorSkin> getSkins() {
+          return skins;
+     }
+
+     public void setSkins(List<SurvivorSkin> skins) {
+          this.skins = skins;
      }
 }
