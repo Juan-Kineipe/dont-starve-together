@@ -29,10 +29,10 @@ public class Survivor {
      private String icon;
      @Column
      private String portrait;
+     @Column
+     private String birthday;
      @Column(name = "favorite_food")
      private String favoriteFood;
-     @Column
-     private Date birthday;
      @Column(name = "odds_of_survival")
      private OddsOfSurvivalEnum oddsOfSurvival;
      @Column
@@ -48,18 +48,22 @@ public class Survivor {
      @JoinColumn(name = "survivor_id")
      private List<SurvivorSkin> skins = new ArrayList<>();
 
-     public Survivor(long id, String name, String title, String description, String motto, String favoriteFood, Date birthday, OddsOfSurvivalEnum oddsOfSurvival, int health, int hunger, int sanity) {
+     public Survivor(Long id, String name, String title, String description, String motto, String icon, String portrait, String birthday, String favoriteFood, OddsOfSurvivalEnum oddsOfSurvival, int health, int hunger, int sanity, List<String> perks, List<SurvivorSkin> skins) {
           this.id = id;
           this.name = name;
           this.title = title;
           this.description = description;
           this.motto = motto;
-          this.favoriteFood = favoriteFood;
+          this.icon = icon;
+          this.portrait = portrait;
           this.birthday = birthday;
+          this.favoriteFood = favoriteFood;
           this.oddsOfSurvival = oddsOfSurvival;
           this.health = health;
           this.hunger = hunger;
           this.sanity = sanity;
+          this.perks = perks;
+          this.skins = skins;
      }
 
      public Survivor() { }
@@ -120,20 +124,20 @@ public class Survivor {
           this.portrait = portrait;
      }
 
+     public String getBirthday() {
+          return birthday;
+     }
+
+     public void setBirthday(String birthday) {
+          this.birthday = birthday;
+     }
+
      public String getFavoriteFood() {
           return favoriteFood;
      }
 
      public void setFavoriteFood(String favoriteFood) {
           this.favoriteFood = favoriteFood;
-     }
-
-     public Date getBirthday() {
-          return birthday;
-     }
-
-     public void setBirthday(Date birthday) {
-          this.birthday = birthday;
      }
 
      public OddsOfSurvivalEnum getOddsOfSurvival() {
