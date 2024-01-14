@@ -34,6 +34,7 @@ public class Survivor {
      @Column(name = "favorite_food")
      private String favoriteFood;
      @Column(name = "odds_of_survival")
+     @Enumerated(EnumType.STRING)
      private OddsOfSurvivalEnum oddsOfSurvival;
      @Column
      private int health;
