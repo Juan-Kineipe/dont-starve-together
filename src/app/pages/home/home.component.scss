@@ -1,0 +1,174 @@
+@font-face {
+    font-family: "Belisa Plumilla";
+    src: url(../../../assets/fonts/belisa_plumilla.ttf);
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../../../assets/backgrounds/bg_spiral.png");
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: "Belisa Plumilla";
+    overflow-y: scroll;
+}
+
+.survivor {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    gap: 50px 25px;
+    padding: 50px;
+
+    @media screen and (max-width: 1279px) {
+        grid-template-columns: auto;
+        padding: 25px 50px;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-auto-rows: min-content;
+        gap: 25px;
+        justify-items: center;
+
+        @media screen and (max-width: 767px) {
+            width: 100%;
+            grid-template-columns: repeat(auto-fill, minmax(125px, 1fr));
+        }
+    }
+
+    &__select {
+        justify-self: start;
+        padding-bottom: 25px;
+
+        @media screen and (min-width: 768px) {
+            grid-column: span 5;
+        }
+    }
+
+    &__frame {
+        width: 100px;
+        height: 117px;
+        background-image: url("../../../assets/icons/frame.png");
+        background-size: cover;
+        display: grid;
+        justify-content: center;
+        align-content: center;
+    }
+
+    &__frame:hover {
+        background-image: url("../../../assets/icons/frame_hovered.png");
+        cursor: pointer;
+    }
+
+    &__icon {
+        width: 75px;
+    }
+
+    &__details {
+        display: grid;
+        grid-template-rows: auto auto 1fr;
+        justify-self: start;
+
+        @media screen and (max-width: 1279px) {
+            justify-self: center;
+        }
+    }
+
+    &__name {
+        max-width: 500px;
+        justify-self: center;
+        align-self: center;
+        margin-bottom: -50px;
+    }
+
+    &__infos {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        justify-content: center;
+
+        @media screen and (max-width: 767px) {
+            grid-template-columns: auto;
+        }
+    }
+
+    &__portrait {
+        grid-row: span 2;
+        max-width: 300px;
+    }
+
+    &__stats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+        width: 250px;
+        align-self: center;
+        justify-self: center;
+
+        > div {
+            display: grid;
+            justify-items: center;
+        }
+    }
+
+    &__stats-icon {
+        width: calc(250px / 3);
+    }
+
+    &__stats-frame {
+        background-image: url("../../../assets/stats/stats_frame.png");
+        background-size: cover;
+        padding: 2px 20px 0;
+        margin-top: -15px;
+        text-align: center;
+        line-height: 0.8;
+
+        span {
+            font-size: 2.3rem;
+            font-weight: bold;
+            display: block;
+            transform: scaleY(0.5);
+        }
+    }
+
+    &__title {
+        font-size: 3rem;
+        font-weight: bold;
+        color: #d0d0c8;
+        display: block;
+        transform: scaleY(0.5);
+    }
+
+    &__subtitle {
+        font-size: 2.3rem;
+        font-weight: bold;
+        color: #908c8b;
+        display: block;
+        transform: scaleY(0.5);
+    }
+
+    &__odds {
+        text-align: center;
+        align-self: start;
+        line-height: 0.8;
+
+        @media screen and (max-width: 767px) {
+            padding-top: 50px;
+        }
+    }
+
+    &__perks {
+        margin: 25px 0 0 25px;
+        line-height: 0.8;
+
+        @media screen and (max-width: 1279px) {
+            margin: 25px 0 0 0;
+            justify-self: center;
+        }
+    }
+}
