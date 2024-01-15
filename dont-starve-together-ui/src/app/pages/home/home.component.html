@@ -1,1 +1,91 @@
-<p>home works!</p>
+<main>
+    <section class="survivor" *ngIf="survivorList.length > 0">
+        <section class="survivor__list">
+            <span class="survivor__select survivor__title">
+                Survivor Select
+            </span>
+            <figure
+                class="survivor__frame"
+                *ngFor="let survivor of survivorList"
+                (mouseenter)="showSurvivorInfo(survivor)"
+            >
+                <img
+                    class="survivor__icon"
+                    src="../../../assets/icons/{{survivor.name}}.png"
+                    alt="{{survivor.name}}"
+                    title="{{survivor.name}}"
+                />
+            </figure>
+        </section>
+        <section class="survivor__details" *ngIf="activeSurvivor">
+            <figure class="survivor__name">
+                <img src="../../../assets/names/{{activeSurvivor.name}}.png" />
+            </figure>
+            <div class="survivor__infos">
+                <figure class="survivor__portrait">
+                    <img
+                        src="../../../assets/portraits/{{activeSurvivor.name}}.png"
+                        alt="{{activeSurvivor.name}}"
+                        title="{{activeSurvivor.name}}"
+                    />
+                </figure>
+                <div class="survivor__stats">
+                    <div>
+                        <img
+                            class="survivor__stats-icon"
+                            src="../../../assets/stats/health.png"
+                            *ngIf="activeSurvivor.name !== 'Wanda'"
+                        />
+                        <img
+                            class="survivor__stats-icon"
+                            src="../../../assets/stats/health_wanda.png"
+                            *ngIf="activeSurvivor.name === 'Wanda'"
+                        />
+                        <div class="survivor__stats-frame">
+                            <span>{{activeSurvivor.health}}</span>
+                        </div>
+                    </div>
+                    <div>
+                        <img
+                            class="survivor__stats-icon"
+                            src="../../../assets/stats/hunger.png"
+                        />
+                        <div class="survivor__stats-frame">
+                            <span>{{activeSurvivor.hunger}}</span>
+                        </div>
+                    </div>
+                    <div>
+                        <img
+                            class="survivor__stats-icon"
+                            src="../../../assets/stats/sanity.png"
+                        />
+                        <div class="survivor__stats-frame">
+                            <span>{{activeSurvivor.sanity}}</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="survivor__odds">
+                    <span class="survivor__title">Odds of Survival</span>
+                    <span class="survivor__subtitle">
+                        {{activeSurvivor.oddsOfSurvival}}
+                    </span>
+                </div>
+            </div>
+            <div class="survivor__perks">
+                <span class="survivor__title">{{activeSurvivor.title}}</span>
+                <ul *ngFor="let perk of activeSurvivor.perks">
+                    <li>
+                        <span class="survivor__subtitle"> *{{perk}} </span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </section>
+</main>
+<ngx-spinner
+    bdColor="rgba(0, 0, 0, 0.5)"
+    size="medium"
+    color="#d0d0c8"
+    type="ball-pulse"
+    [fullScreen]="true"
+></ngx-spinner>
