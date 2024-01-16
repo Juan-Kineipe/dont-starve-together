@@ -4,7 +4,6 @@ import com.example.dontstarvetogetherapi.domain.enums.OddsOfSurvivalEnum;
 import jakarta.persistence.*;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 @Entity
