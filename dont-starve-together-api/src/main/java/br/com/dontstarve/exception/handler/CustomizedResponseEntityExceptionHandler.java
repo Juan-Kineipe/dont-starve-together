@@ -1,7 +1,7 @@
-package com.example.dontstarvetogetherapi.exception.handler;
+package br.com.dontstarve.exception.handler;
 
-import com.example.dontstarvetogetherapi.exception.NotFoundException;
-import com.example.dontstarvetogetherapi.exception.ExceptionResponse;
+import br.com.dontstarve.exception.NotFoundException;
+import br.com.dontstarve.exception.ExceptionResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;

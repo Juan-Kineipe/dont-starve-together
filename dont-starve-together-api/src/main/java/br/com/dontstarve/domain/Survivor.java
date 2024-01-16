@@ -1,6 +1,6 @@
-package com.example.dontstarvetogetherapi.domain;
+package br.com.dontstarve.domain;
 
-import com.example.dontstarvetogetherapi.domain.enums.OddsOfSurvivalEnum;
+import br.com.dontstarve.domain.enums.OddsOfSurvivalEnum;
 import jakarta.persistence.*;
 
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package com.example.dontstarvetogetherapi.exception;
+package br.com.dontstarve.exception;
 
 import java.io.Serializable;
 import java.util.Date;

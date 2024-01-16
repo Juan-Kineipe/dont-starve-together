@@ -1,8 +1,8 @@
-package com.example.dontstarvetogetherapi.service;
+package br.com.dontstarve.service;
 
-import com.example.dontstarvetogetherapi.domain.Survivor;
-import com.example.dontstarvetogetherapi.exception.NotFoundException;
-import com.example.dontstarvetogetherapi.repository.SurvivorRepository;
+import br.com.dontstarve.domain.Survivor;
+import br.com.dontstarve.exception.NotFoundException;
+import br.com.dontstarve.repository.SurvivorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

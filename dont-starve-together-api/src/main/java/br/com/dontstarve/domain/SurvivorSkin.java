@@ -1,4 +1,4 @@
-package com.example.dontstarvetogetherapi.domain;
+package br.com.dontstarve.domain;
 
 import jakarta.persistence.*;
 

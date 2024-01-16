@@ -1,4 +1,4 @@
-package com.example.dontstarvetogetherapi.domain.enums;
+package br.com.dontstarve.domain.enums;
 
 public enum OddsOfSurvivalEnum {
     Slim("Slim"),

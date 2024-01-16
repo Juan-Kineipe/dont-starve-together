@@ -1,6 +1,6 @@
-package com.example.dontstarvetogetherapi.repository;
+package br.com.dontstarve.repository;
 
-import com.example.dontstarvetogetherapi.domain.Survivor;
+import br.com.dontstarve.domain.Survivor;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
