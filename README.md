@@ -4,6 +4,8 @@ This project is inspired by the game [Don't Starve Together](https://www.klei.co
 
 The UI represents a mock of the Survivor Select screen in the game.
 
+![Screenshot](https://github.com/Juan-Kineipe/dont-starve-together/blob/main/other/screenshot.png?raw=true)
+
 The API provides endpoints to get Survivors related information.
 
 ## Motivation
