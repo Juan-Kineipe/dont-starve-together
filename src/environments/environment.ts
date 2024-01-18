@@ -1,3 +1,3 @@
 export const environment = {
-    apiUrl: "http://localhost:8080",
+    apiUrl: "https://dont-starve-together-production.up.railway.app",
 };
