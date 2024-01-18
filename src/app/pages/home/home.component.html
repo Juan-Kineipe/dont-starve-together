@@ -11,7 +11,7 @@
             >
                 <img
                     class="survivor__icon"
-                    src="../../../assets/icons/{{survivor.name}}.png"
+                    src="assets/icons/{{survivor.name}}.png"
                     alt="{{survivor.name}}"
                     title="{{survivor.name}}"
                 />
@@ -19,12 +19,12 @@
         </section>
         <section class="survivor__details" *ngIf="activeSurvivor">
             <figure class="survivor__name">
-                <img src="../../../assets/names/{{activeSurvivor.name}}.png" />
+                <img src="assets/names/{{activeSurvivor.name}}.png" />
             </figure>
             <div class="survivor__infos">
                 <figure class="survivor__portrait">
                     <img
-                        src="../../../assets/portraits/{{activeSurvivor.name}}.png"
+                        src="assets/portraits/{{activeSurvivor.name}}.png"
                         alt="{{activeSurvivor.name}}"
                         title="{{activeSurvivor.name}}"
                     />
@@ -33,12 +33,12 @@
                     <div>
                         <img
                             class="survivor__stats-icon"
-                            src="../../../assets/stats/health.png"
+                            src="assets/stats/health.png"
                             *ngIf="activeSurvivor.name !== 'Wanda'"
                         />
                         <img
                             class="survivor__stats-icon"
-                            src="../../../assets/stats/health_wanda.png"
+                            src="assets/stats/health_wanda.png"
                             *ngIf="activeSurvivor.name === 'Wanda'"
                         />
                         <div class="survivor__stats-frame">
@@ -48,7 +48,7 @@
                     <div>
                         <img
                             class="survivor__stats-icon"
-                            src="../../../assets/stats/hunger.png"
+                            src="assets/stats/hunger.png"
                         />
                         <div class="survivor__stats-frame">
                             <span>{{activeSurvivor.hunger}}</span>
@@ -57,7 +57,7 @@
                     <div>
                         <img
                             class="survivor__stats-icon"
-                            src="../../../assets/stats/sanity.png"
+                            src="assets/stats/sanity.png"
                         />
                         <div class="survivor__stats-frame">
                             <span>{{activeSurvivor.sanity}}</span>
