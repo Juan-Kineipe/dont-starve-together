@@ -2,7 +2,7 @@
 
 This project is inspired by the game [Don't Starve Together](https://www.klei.com/games/dont-starve-together).
 
-The UI represents a mock of the Survivor Select screen in the game.
+The UI represents a mock of the Survivor Select screen in the game. You can access it at https://juan-kineipe.github.io/dont-starve-together/
 
 ![Screenshot](https://github.com/Juan-Kineipe/dont-starve-together/blob/main/other/screenshot.png?raw=true)
 
