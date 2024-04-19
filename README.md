@@ -6,7 +6,7 @@ The UI represents a mock of the Survivor Select screen in the game. You can acce
 
 ![Screenshot](https://github.com/Juan-Kineipe/dont-starve-together/blob/main/other/screenshot.png?raw=true)
 
-The API provides endpoints to get Survivors related information. You can find the documentation [here](https://dont-starve-together-production.up.railway.app/swagger-ui/index.html).
+The API provides endpoints to get Survivors related information.
 
 ## Motivation
 
